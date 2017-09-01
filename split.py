@@ -6,7 +6,7 @@ def main():
     parser.add_argument('-r', '--result', default='workers/hive<index>.csv', help='Result')
     parser.add_argument('-c', '--count', default=5, help='# of accounts')
     args = parser.parse_args()
-
+    args.count += 1
     f = open(args.accounts_file, 'r')
     lines = f.readlines()
     i = 0
